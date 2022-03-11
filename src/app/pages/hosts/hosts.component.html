@@ -1,0 +1,22 @@
+<input nz-input placeholder="Checkmarx Server" [(ngModel)]="hostUrl" />
+<button nz-button nzType="primary" (click)="addhost()">Add</button>
+
+<nz-table #basicTable [nzData]="listOfData">
+    <thead>
+        <tr>
+            <th>Checkmarx Server</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of basicTable.data">
+            <td>{{data.hostUrl}}</td>
+            <td>
+                <a>login</a>
+                <nz-divider nzType="vertical"></nz-divider>
+                <a (click)="deletehost(data)">Delete</a>
+                <!-- <a onClick="deletehost(data)">Delete</a> -->
+            </td>
+        </tr>
+    </tbody>
+</nz-table>

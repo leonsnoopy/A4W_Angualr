@@ -1,0 +1,8 @@
+<nz-select [(ngModel)]="selected" style="width:'250px'">
+  <nz-option *ngFor="let p of listOfData" [nzValue]="p.hostUrl" [nzLabel]="p.hostUrl"></nz-option>
+</nz-select>
+
+<input nz-input placeholder="Account" [(ngModel)]="account" />
+<input nz-input placeholder="Password" [(ngModel)]="password" />
+
+<button nz-button nzType="primary" (click)="login()">Login</button>
