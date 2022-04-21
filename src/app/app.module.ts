@@ -15,7 +15,6 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzInputModule } from 'ng-zorro-antd/input';
 
-
 import { HomePageModules } from './pages/home-page.module';
 
 registerLocaleData(en);

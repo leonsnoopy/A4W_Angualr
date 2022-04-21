@@ -1,0 +1,63 @@
+<nz-tabset>
+  <nz-tab nzTitle="說明">
+    <h2>以下的動態Guard，可以設定多個不同的實例方式，搭配Invoaction可以加強安全性，讓駭客難以猜測到規律性。</h2>
+
+    <ul>
+      <li>Checksum</li>
+      <li>Script Verification</li>
+      <li>Debug Detection</li>
+      <li>Domain Lock</li>
+      <li>User Agent Lock</li>
+      <li>Automation Detection</li>
+      <li>Web App Integrity</li>
+      <li>Time Lock</li>
+      <li>Hook Detection</li>
+      <li>Code Lifting Detection（Hybird）</li>
+    </ul>
+
+    <h3>以下是Hook Detection多個實例的範例應用，右鍵開啟Devtool修改eval及Date的JS原生函示</h3>
+
+    <div nz-row>
+      <div nz-col nzSpan="24">
+        <nz-card>
+          <h3>執行原生JS函式</h3>
+          <code> 
+            window.eval('alert("Hi Eval")');<br>
+            escape("!@#$%");
+          </code>
+        </nz-card>
+
+      </div>
+
+
+      <div nz-col nzSpan="24">
+        <nz-card>
+          <h3>透過Devtool修改Eval函式</h3>
+          <code> 
+            window.eval = function() {{ '{' }}<br>
+            &nbsp;&nbsp;console.log("eval has been change")<br>
+            {{ '}' }}<br>
+            <br>
+            escape = function(){{ '{' }} console.log("I have been hooked") {{ '}' }}
+          </code>
+        </nz-card>
+      </div>
+    </div>
+
+    <nz-collapse>
+      <nz-collapse-panel
+      nzHeader="Guardspec的設定方式"
+      nzActive="false"
+      nzDisabled="false"
+      >
+      <div nz-col nzSpan="24">
+        <img
+          nz-image width="70%" nzSrc="/assets/guards/multi-ins/1.png"
+          alt=""
+        />
+      </div>
+      </nz-collapse-panel>
+    </nz-collapse>
+  </nz-tab>
+
+</nz-tabset>

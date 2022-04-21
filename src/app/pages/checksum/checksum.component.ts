@@ -12,19 +12,4 @@ export class ChecksumComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  add(event:any){
-    this.count +=1
-    console.log(this.add)
-  }
-
-  change_1(){
-    this.add = function(){
-      this.count +=1
-    }
-  }
-  change_2(){
-    this.add = function(){
-      this.count +=2
-    }
-  }
 }

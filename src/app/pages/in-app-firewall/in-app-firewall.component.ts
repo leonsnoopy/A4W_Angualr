@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpserviceService } from '../../service/httpservice.service';
 
 @Component({
-  selector: 'app-api-text',
-  templateUrl: './api-text.component.html',
-  styleUrls: ['./api-text.component.css']
+  selector: 'app-in-app-firewall',
+  templateUrl: './in-app-firewall.component.html',
+  styleUrls: ['./in-app-firewall.component.css']
 })
-export class ApiTextComponent implements OnInit {
+export class InAppFirewallComponent implements OnInit {
   content:string='';
   content2:string='';
 

@@ -12,28 +12,39 @@
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <!-- A4W -->
+      <li nz-submenu nzOpen nzTitle="Arxan Web Protect" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/invocation">Invocation</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/multiIns">Multiple Instances</a>
+          </li>
+        </ul>
+      </li>
+      <!-- A4W Guard -->
+      <li nz-submenu nzOpen nzTitle="Arxan Guard" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/inAppFirewall">In-App Firewall</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/checksum">Checksum</a>
+          </li>
+
+          <!-- <li nz-menu-item nzMatchRouter>
+            <a routerLink="/hookDetection">Hook Detection</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/scriptVerification">Script Verification</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/subResourceIntegrity">SubResource Integrity</a>
+          </li> -->
+        </ul>
+      </li>
       
-      <li nz-submenu nzOpen nzTitle="Arxan Test" nzIcon="form">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/apiTest">Api Test</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/checksum">checksum Test</a>
-          </li>
-        </ul>
-      </li>
-      <li nz-submenu nzOpen nzTitle="Checkmarx Test" nzIcon="dashboard">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/hosts">Host</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/login">login</a>
-          </li>
-          
-        </ul>
-      </li>
     </ul>
   </nz-sider>
   <nz-layout>
@@ -48,7 +59,7 @@
       </div>
     </nz-header>
     <nz-content>
-      <div class="inner-content">
+      <div class="inner-content" style="overflow: auto">
         <router-outlet></router-outlet>
       </div>
     </nz-content>
