@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer} from '@angular/platform-browser'
 
 @Component({
   selector: 'app-checksum',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChecksumComponent implements OnInit {
   count:number=0;
-  constructor() { }
+  html1:any="";
+  html2:any="";
+  constructor(private sanitizer: DomSanitizer) {
+    this.html1 = this.sanitizer.bypassSecurityTrustHtml(
+      '<iframe width="100%" height="800" src="./assets/html/checksum1.html"></iframe>',
+    );
+    this.html2 = this.sanitizer.bypassSecurityTrustHtml(
+      '<iframe width="100%" height="800" src="./assets/html/checksum2.html"></iframe>',
+    );
+   }
+  
 
   ngOnInit(): void {
+    
   }
+
+  
 
 }
