@@ -15,6 +15,7 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
 
+
 import { hostsComponent } from './hosts/hosts.component';
 import { LoginCxComponent } from './login-cx/login-cx.component';
 import { InAppFirewallComponent } from './in-app-firewall/in-app-firewall.component';
@@ -26,6 +27,18 @@ import { ScriptVerificationComponent } from './script-verification/script-verifi
 import { SubresourceIntegrityComponent } from './subresource-integrity/subresource-integrity.component';
 import { InvocationComponent } from './invocation/invocation.component';
 import { MultiInsComponent } from './multi-ins/multi-ins.component';
+import { DebugDetectionComponent } from './debug-detection/debug-detection.component';
+import { WebAppIntegrityComponent } from './web-app-integrity/web-app-integrity.component';
+import { StringEncryptionComponent } from './string-encryption/string-encryption.component';
+import { OperatorRemovalComponent } from './operator-removal/operator-removal.component';
+import { ExternalHidingComponent } from './external-hiding/external-hiding.component';
+import { NumericLiteralHidingComponent } from './numeric-literal-hiding/numeric-literal-hiding.component';
+import { ContorlFlowFlatteningComponent } from './contorl-flow-flattening/contorl-flow-flattening.component';
+import { IdentifierRenamingComponent } from './identifier-renaming/identifier-renaming.component';
+import { ActionsComponent } from './actions/actions.component';
+import { GamebruteforceComponent } from './gamebruteforce/gamebruteforce.component';
+import { GamesComponent } from './games/games.component';
+import { LabsComponent } from './labs/labs.component';
 
 @NgModule({
   imports: [
@@ -42,7 +55,7 @@ import { MultiInsComponent } from './multi-ins/multi-ins.component';
     NzTabsModule,
     NzCardModule,
     NzCollapseModule,
-    NzEmptyModule
+    NzEmptyModule,
   ],
   declarations: [
     hostsComponent,
@@ -55,7 +68,19 @@ import { MultiInsComponent } from './multi-ins/multi-ins.component';
     ScriptVerificationComponent,
     SubresourceIntegrityComponent,
     InvocationComponent,
-    MultiInsComponent
+    MultiInsComponent,
+    DebugDetectionComponent,
+    WebAppIntegrityComponent,
+    StringEncryptionComponent,
+    OperatorRemovalComponent,
+    ExternalHidingComponent,
+    NumericLiteralHidingComponent,
+    ContorlFlowFlatteningComponent,
+    IdentifierRenamingComponent,
+    ActionsComponent,
+    GamebruteforceComponent,
+    GamesComponent,
+    LabsComponent
   ]
 })
 export class HomePageModules {}

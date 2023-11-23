@@ -1,0 +1,38 @@
+<div nz-row [nzGutter]="8">
+  <div nz-col class="gutter-row" [nzSm]="12" [nzMd]="8" [nzLg]="4">
+    <nz-card on-click="gotoLab('hide_image')" nzHoverable  [nzCover]="coverTemplate" nzTitle="隱寫技術" [nzExtra]="extraTemplate">
+      <nz-card-meta  nzTitle="圖片隱寫" nzDescription="隱寫技術(Steganography)，將文字隱藏在圖片中後讀取"></nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img alt="example" src="assets/image_hide.jpeg" />
+    </ng-template>
+    <ng-template #extraTemplate>
+       <a href="https://arxan.gss.com.tw/labs/hide_image/index.html" target="_blank"> <span nz-icon nzType="link" nzTheme="outline">前往</span></a>
+    </ng-template>
+  </div>
+
+  <div nz-col class="gutter-row" [nzSm]="12" [nzMd]="8" [nzLg]="4">
+    <nz-card on-click="gotoLab('checksum_x')" nzHoverable  [nzCover]="coverTemplate2" nzTitle="Checksum" [nzExtra]="extraTemplate2">
+      <nz-card-meta  nzTitle="防護前" nzDescription="Arxan Checksum 防護前"></nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate2>
+      <img alt="example" src="assets/arxanLogo2.png" />
+    </ng-template>
+    <ng-template #extraTemplate2>
+       <a href="https://arxan.gss.com.tw/game/game1.html" target="_blank"> <span nz-icon nzType="link" nzTheme="outline">前往</span></a>
+    </ng-template>
+  </div>
+
+  <div nz-col class="gutter-row" [nzSm]="12" [nzMd]="8" [nzLg]="4">
+    <nz-card on-click="gotoLab('checksum_v')" nzHoverable  [nzCover]="coverTemplate3" nzTitle="Checksum" [nzExtra]="extraTemplate3">
+      <nz-card-meta  nzTitle="防護後" nzDescription="Arxan Checksum 防護前"></nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate3>
+      <img alt="example" src="assets/arxanLogo.png" />
+    </ng-template>
+    <ng-template #extraTemplate3>
+       <a href="https://arxan.gss.com.tw/game/game1.html" target="_blank"> <span nz-icon nzType="link" nzTheme="outline">前往</span></a>
+    </ng-template>
+  </div>
+
+</div>

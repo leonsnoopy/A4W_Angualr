@@ -1,49 +1,47 @@
-<nz-tabset>
-  <nz-tab nzTitle="說明">
+<h2>如同防火牆的功能，可以阻止來源不明的資料，設定白名單</h2>
 
-    <h2>如同防火牆的功能，可以阻止來源不明的資料，設定白名單</h2>
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <nz-card nzTitle="Request來自於自己Server(Domain)上" [nzExtra]="extraTemplate">
+      <nz-empty *ngIf="!content1"></nz-empty>
+      <p style="overflow: auto;">{{content1}}</p>
+    </nz-card>
+    <ng-template #extraTemplate>
+      <button nz-button nzType="primary" (click)="apiGetForServer()">Get</button>
+    </ng-template>
+  </div>
+</div>
 
-    <div nz-row>
-      <div nz-col nzSpan="24">
-          <nz-card nzTitle="從 api.publicapis.org 上取資料" [nzExtra]="extraTemplate" >
-            <nz-empty *ngIf="!content"></nz-empty>
-            <p style="overflow: auto;" >{{content}}</p>
-          </nz-card>
-          <ng-template #extraTemplate >
-            <button nz-button nzType="primary" (click)="apiGet()">Get</button>
-          </ng-template>
-      </div>
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <nz-card nzTitle="Request來自於(jsonplaceholder.typicode.com)上" [nzExtra]="extraTemplate2">
+      <p>jsonplaceholder.typicode.com 是允許的 domain</p>
+      <nz-empty *ngIf="!content2"></nz-empty>
+      <p style="overflow: auto;">{{content2}}</p>
+    </nz-card>
+    <ng-template #extraTemplate2>
+      <button nz-button nzType="primary" (click)="apiGet2()">Get</button>
+    </ng-template>
+  </div>
+</div>
+
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <nz-card nzTitle="Request來自於(api.publicapis.org)上" [nzExtra]="extraTemplate3">
+      <p>parallelum.com.br 是非允許的 domain</p>
+      <nz-empty *ngIf="!content3"></nz-empty>
+      <p style="overflow: auto;">{{content3}}</p>
+    </nz-card>
+    <ng-template #extraTemplate3>
+      <button nz-button nzType="primary" (click)="apiGet3()">Get</button>
+    </ng-template>
+  </div>
+</div>
+
+<nz-collapse>
+  <nz-collapse-panel nzHeader="Guardspec的設定方式" nzActive="false" nzDisabled="false">
+    <div nz-col nzSpan="24">
+      <img nz-image width="70%" nzSrc="assets/guards/in-app-firewall/4.png" alt="" />
     </div>
-
-
-    <div nz-row>
-      <div nz-col nzSpan="24">
-          <nz-card nzTitle="從 parallelum.com.br 上取資料" [nzExtra]="extraTemplate2" >
-            <nz-empty *ngIf="!content2"></nz-empty>
-            <p style="overflow: auto;">{{content2}}</p>
-          </nz-card>
-          <ng-template #extraTemplate2 >
-            <button nz-button nzType="primary" (click)="apiGet2()">Get</button>
-          </ng-template>
-      </div>
-    </div>
-
-    <nz-collapse>
-      <nz-collapse-panel
-      nzHeader="Guardspec的設定方式"
-      nzActive="false"
-      nzDisabled="false"
-      >
-      <div nz-col nzSpan="24">
-        <img
-          nz-image width="70%" nzSrc="/assets/guards/in-app-firewall/4.png"
-          alt=""
-        />
-      </div>
-      </nz-collapse-panel>
-    </nz-collapse>
-    
-
-  </nz-tab>
-      
-</nz-tabset>
+  </nz-collapse-panel>
+</nz-collapse>

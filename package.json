@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build --base-href='./' --deploy-url='./' ",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "sentry:ci": "sentry-cli sourcemaps inject --org leon-rt --project javascript-angular ./dist/arxan-project && sentry-cli sourcemaps upload --org leon-rt --project javascript-angular ./dist/arxan-project"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +19,8 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@sentry/angular-ivy": "^7.57.0",
+    "@sentry/cli": "^2.19.4",
     "ng-zorro-antd": "^12.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

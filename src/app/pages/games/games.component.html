@@ -1,0 +1,65 @@
+
+
+
+<div nz-row [nzGutter]="8">
+
+  <div nz-col class="gutter-row" [nzSm]="12" [nzMd]="8" [nzLg]="6">
+    <nz-card on-click="gotoGame(1)" nzHoverable  [nzCover]="coverTemplate" nzTitle="猜密碼遊戲" [nzExtra]="extraTemplate">
+      <nz-card-meta  nzTitle="第一關-小試身手" nzDescription="暴力破解猜密碼"></nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img alt="example" src="assets/game1.png" />
+    </ng-template>
+    <ng-template #extraTemplate>
+       <a href="https://arxan.gss.com.tw/game/game1.html" target="_blank"> <span nz-icon nzType="link" nzTheme="outline">前往</span></a>
+    </ng-template>
+  </div>
+
+  <div nz-col class="gutter-row" [nzSm]="12" [nzMd]="8" [nzLg]="6">
+    <nz-card on-click="gotoGame(2)" nzHoverable  [nzCover]="coverTemplate2" nzTitle="猜密碼遊戲" [nzExtra]="extraTemplate2">
+      <nz-card-meta  nzTitle="第二關-偵查" nzDescription="暴力破解猜密碼"></nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate2>
+      <img alt="example" src="assets/game2.png" />
+    </ng-template>
+    <ng-template #extraTemplate2>
+       <a href="https://arxan.gss.com.tw/game/game2.html" target="_blank"> <span nz-icon nzType="link" nzTheme="outline">前往</span></a>
+    </ng-template>
+  </div>
+
+  <div nz-col class="gutter-row" [nzSm]="12" [nzMd]="8" [nzLg]="6">
+    <nz-card on-click="gotoGame(3)" nzHoverable  [nzCover]="coverTemplate3" nzTitle="猜密碼遊戲" [nzExtra]="extraTemplate3">
+      <nz-card-meta  nzTitle="第三關-破解" nzDescription="暴力破解猜密碼"></nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate3>
+      <img alt="example" src="assets/game3.png" />
+    </ng-template>
+    <ng-template #extraTemplate3>
+       <a href="https://arxan.gss.com.tw/game/game3.html" target="_blank"> <span nz-icon nzType="link" nzTheme="outline">前往</span></a>
+    </ng-template>
+  </div>
+
+  <div nz-col class="gutter-row" [nzSm]="12" [nzMd]="8" [nzLg]="6">
+    <nz-card on-click="gotoGame(4)" nzHoverable  [nzCover]="coverTemplate4" nzTitle="猜密碼遊戲" [nzExtra]="extraTemplate4">
+      <nz-card-meta  nzTitle="第四關-竄改" nzDescription="暴力破解猜密碼"></nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate4>
+      <img alt="example" src="assets/game4.png" />
+    </ng-template>
+    <ng-template #extraTemplate4>
+       <a href="https://arxan.gss.com.tw/game/game4.html" target="_blank"> <span nz-icon nzType="link" nzTheme="outline">前往</span></a>
+    </ng-template>
+  </div>
+
+  <div nz-col class="gutter-row" [nzSm]="12" [nzMd]="8" [nzLg]="6">
+    <nz-card on-click="gotoGame(5)" nzHoverable  [nzCover]="coverTemplate5" nzTitle="猜密碼遊戲" [nzExtra]="extraTemplate5">
+      <nz-card-meta  nzTitle="第五關-大神" nzDescription="暴力破解猜密碼"></nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate5>
+      <img alt="example" src="assets/game5.png" />
+    </ng-template>
+    <ng-template #extraTemplate5>
+       <a href="https://arxan.gss.com.tw/game/game5.html" target="_blank"> <span nz-icon nzType="link" nzTheme="outline">前往</span></a>
+    </ng-template>
+  </div>
+</div>

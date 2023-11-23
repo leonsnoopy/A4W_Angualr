@@ -28,7 +28,7 @@
               // {
               //   "glob": "**/*",
               //   "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
-              //   "output": "/assets/"
+              //   "output": "assets/"
               // }
             ],
             "styles": [
@@ -40,18 +40,21 @@
           },
           "configurations": {
             "production": {
+              "namedChunks": true,
+              "vendorChunk": true, 
+              "sourceMap": true,
               "buildOptimizer": true,
               "optimization": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "10mb"
+                  "maximumWarning": "500kb"
+                  // "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "2kb"
+                  // "maximumError": "4kb"
                 }
               ],
               "fileReplacements": [

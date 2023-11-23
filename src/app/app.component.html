@@ -4,34 +4,78 @@
             nzWidth="256px"
             nzBreakpoint="md"
             [(nzCollapsed)]="isCollapsed"
+            nzBreakpoint="lg"
+            [nzCollapsedWidth]="0"
             [nzTrigger]="null">
     <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
-        <h1>Leon Lin Test</h1>
+      <a routerLink="/home">
+        <img src="assets/arxanLogo.png" alt="logo">
+        <h1>Arxan For Web</h1>
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
       <!-- A4W -->
-      <li nz-submenu nzOpen nzTitle="Arxan Web Protect" nzIcon="dashboard">
+      <li nz-submenu [(nzOpen)]="openMap.sub1" (nzOpenChange)="openHandler('sub1')" nzTitle="Web Portect" nzIcon="dashboard">
         <ul>
-          <li nz-menu-item nzMatchRouter>
+          <!-- <li nz-menu-item nzMatchRouter>
+            <a routerLink="/home">Arxan For Web</a>
+          </li> -->
+
+          <!-- <li nz-menu-item nzMatchRouter>
             <a routerLink="/invocation">Invocation</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
+          </li> -->
+
+          <!-- <li nz-menu-item nzMatchRouter>
             <a routerLink="/multiIns">Multiple Instances</a>
+          </li> -->
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/actions">Actions</a>
           </li>
         </ul>
       </li>
-      <!-- A4W Guard -->
-      <li nz-submenu nzOpen nzTitle="Arxan Guard" nzIcon="form">
+      <!-- A4W Static Guard -->
+      <li nz-submenu [(nzOpen)]="openMap.sub2" (nzOpenChange)="openHandler('sub2')" nzTitle="Static Guard" nzIcon="form">
         <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/identifierRenaming">Identifier Renaming</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/contorlFlowFlattening">Contorl Flow Flattening</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/numericLiteralHiding">Numeric Literal Hiding</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/externalHiding">External Hiding</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/operatorRemoval">Operator Removal</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/stringEncryption">String Encryption</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- A4W Dynamic Guard -->
+      <li nz-submenu [(nzOpen)]="openMap.sub3" (nzOpenChange)="openHandler('sub3')" nzTitle="Dynamic Guard" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/debugDetection">DebugDetection</a>
+          </li>
+
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/inAppFirewall">In-App Firewall</a>
           </li>
+          
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/checksum">Checksum</a>
           </li>
+
+          <!-- <li nz-menu-item nzMatchRouter>
+            <a routerLink="/hookDetection">WebAppIntegrity</a>
+          </li> -->
 
           <!-- <li nz-menu-item nzMatchRouter>
             <a routerLink="/hookDetection">Hook Detection</a>
@@ -44,12 +88,11 @@
           </li> -->
         </ul>
       </li>
-      
     </ul>
   </nz-sider>
   <nz-layout>
     <nz-header>
-      <div class="app-header">
+      <div class="app-header" style="background: aliceblue;">
         <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
             <i class="trigger"
                nz-icon
@@ -57,11 +100,30 @@
             ></i>
         </span>
       </div>
+
+      <ul nz-menu nzTheme="light" nzMode="horizontal" style="margin-left: 68px;">
+        <li nz-menu-item routerLink="/home" nzMatchRouter>Home</li>
+        <li nz-menu-item routerLink="/labs" nzMatchRouter>Labs</li>
+        <li nz-menu-item routerLink="/games" nzMatchRouter>Games</li>
+      </ul>
+      
     </nz-header>
     <nz-content>
       <div class="inner-content" style="overflow: auto">
         <router-outlet></router-outlet>
       </div>
     </nz-content>
+  <nz-footer style="text-align: center;padding: 5px 50px;color: rgba(0, 0, 0, 0.85);font-size: 12px;">© 2022 GSS All Rights Reserved. Designed by Leon Lin</nz-footer>
   </nz-layout>
 </nz-layout>
+
+<style>
+@media screen and (min-width: 992px) {
+  .mini-size-show {
+    display: none;
+  }
+}
+.app-header{
+  position: absolute;
+}
+</style>

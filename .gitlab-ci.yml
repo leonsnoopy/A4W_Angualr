@@ -1,0 +1,77 @@
+stages:
+  - pre-build
+  - scan-test
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules
+
+# build-pre-scan:
+#   stage: pre-build
+#   script:
+#     - echo "before scan checkmarx"
+
+# checkmarx-scan:
+#   stage: scan-test
+#   # rules:
+#     # - if: '$CX_FLOW_BUG_TRACKER != "GitLabDashboard" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+#   image:
+#     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
+#     entrypoint: ['']
+#   variables:
+#     CHECKMARX_INCREMENTAL: "true"
+#   script:
+#     - ${CX_FLOW_EXE}
+#           --scan 
+#           --app="${CI_PROJECT_NAME}" 
+#           --namespace="${CI_PROJECT_NAMESPACE}" 
+#           --repo-name="${CI_PROJECT_NAME}" 
+#           --repo-url="${CI_REPOSITORY_URL}" 
+#           --cx-team="${CX_TEAM}" 
+#           --cx-project="${CX_PROJECT}" 
+#           --branch="${CI_COMMIT_BRANCH}"
+#           --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}"
+#           --break-build="${CX_FLOW_BREAK_BUILD}"
+#           --thresholds.High=1
+#           --f=. 
+#           ${PARAMS}
+
+build:
+  stage: build
+  image: node:16.13.2-slim
+  script:
+    - npm install
+# boBsi9fA4W6sTeQLAGnH -- gitlab access token
+
+variables:
+    CHECKMARX_USERNAME: "admin@cx"
+    GITLAB_TOKEN: boBsi9fA4W6sTeQLAGnH
+    GITLAB_URL: "http://172.16.4.105/"
+    GITLAB_API_URL: "http://172.16.4.105/api/v4/"
+    CHECKMARX_DOCKER_IMAGE: "cx-flow" 
+    CX_FLOW_BUG_TRACKER: "GitLab"
+    CX_FLOW_BUG_TRACKER_IMPL: "GitLab"
+    CX_FLOW_EXE: "java -jar /app/cx-flow.jar"
+    CX_PROJECT: "$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME"
+    CHECKMARX_VERSION: "9.2"
+    CHECKMARX_SETTINGS_OVERRIDE: "true"
+    CHECKMARX_EXCLUDE_FILES: ""
+    CHECKMARX_EXCLUDE_FOLDERS: ""
+    CHECKMARX_CONFIGURATION: "Default Configuration"
+    CHECKMARX_SCAN_PRESET: "Checkmarx Default"
+    CX_FLOW_FILTER_SEVERITY: ""
+    # CX_FLOW_FILTER_SEVERITY: "High" // this will have some problems
+    CX_FLOW_FILTER_CATEGORY: ""
+    CX_FLOW_FILTER_CWE: ""
+    CX_FLOW_FILTER_STATUS: ""
+    CX_FLOW_FILTER_STATE: ""
+    CX_FLOW_ENABLED_VULNERABILITY_SCANNERS: sast
+    CX_FLOW_ZIP_EXCLUDE: ".jar"
+    CX_TEAM: "/CxServer"
+    CX_FLOW_BREAK_BUILD: "true"
+    GITLAB_BLOCK_MERGE: "false"
+    GITLAB_ERROR_MERGE: "false"
+    SECURITY_DASHBOARD_ON_MR: "false"
+    PARAMS: ""

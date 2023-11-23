@@ -8,28 +8,30 @@ import { HttpserviceService } from '../../service/httpservice.service';
   styleUrls: ['./in-app-firewall.component.css']
 })
 export class InAppFirewallComponent implements OnInit {
-  content:string='';
+  content1:string='';
   content2:string='';
+  content3:string='';
 
   constructor(private httpService: HttpserviceService) {}
 
   ngOnInit(): void {
   }
 
-  apiGet(){
-    this.httpService.getHttp("https://api.publicapis.org/entries").toPromise().then( (res:any) =>{
+  apiGetForServer(){
+    this.httpService.getHttp("/api/getData").toPromise().then( (res:any) =>{
       console.log(res)
-      this.content=JSON.stringify(res.entries[0]) ;
+      this.content1=JSON.stringify(res) ;
   })}
 
   apiGet2(){
-    this.httpService.getHttp("https://parallelum.com.br/fipe/api/v1/carros/marcas").toPromise().then( (res:any) =>{
+    this.httpService.getHttp("https://jsonplaceholder.typicode.com/todos/1").toPromise().then( (res:any) =>{
       console.log(res)
       this.content2=JSON.stringify(res) ;
   })}
 
-
-  
-
-
+  apiGet3(){
+    this.httpService.getHttp("https://api.publicapis.org/random").toPromise().then( (res:any) =>{
+      console.log(res)
+      this.content3=JSON.stringify(res) ;
+  })}
 }
