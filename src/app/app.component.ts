@@ -32,8 +32,5 @@ export class AppComponent {
     };
 
     foo();
-
   }
-
-  
 }
