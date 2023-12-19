@@ -1,5 +1,9 @@
-# ArxanProject
+
+
+# ArxanProject 建置環境
   use node v16 
+  npm install
+  npm run build
 
 # ArxanProject
 

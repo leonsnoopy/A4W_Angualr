@@ -1,84 +1,42 @@
+<button nz-button nzType="primary" (click)="gotoHtml()">點我前往範例 Example</button>
 
-    <h2>保護程式受到非授權上的修改，驗證其完整性，例如程式碼上Function被調整過，Checksum會計算完整性是否與之前的一致。</h2>
+<h2>保護程式受到非授權上的修改，驗證其完整性，例如程式碼上Function被調整過，Checksum會計算完整性是否與之前的一致。</h2>
 
-    <nz-collapse>
-      <nz-collapse-panel
-        nzHeader="testFunction是有透過Checksum保護的函式"
-        nzActive="true"
-        nzDisabled="false"
-      >
-      <div nz-col nzSpan="24">
-        <img
-          nz-image width="70%" nzSrc="assets/guards/checksum/1.png"
-          alt=""
-        />
-      </div>
-      </nz-collapse-panel>
+<nz-collapse>
+  <nz-collapse-panel nzHeader="testFunction是有透過Checksum保護的函式" nzActive="true" nzDisabled="false">
+    <div nz-col nzSpan="24">
+      <img nz-image width="70%" nzSrc="assets/guards/checksum/1.png" alt="" />
+    </div>
+  </nz-collapse-panel>
 
-      <nz-collapse-panel
-        nzHeader="正常執行的時候alert出原始內容"
-        nzActive="false"
-        nzDisabled="false"
-      >
-      <div nz-col nzSpan="24">
-        <img
-          nz-image width="70%" nzSrc="assets/guards/checksum/2.png"
-          alt=""
-        />
-      </div>
-      </nz-collapse-panel>
+  <nz-collapse-panel nzHeader="正常執行的時候alert出原始內容" nzActive="false" nzDisabled="false">
+    <div nz-col nzSpan="24">
+      <img nz-image width="70%" nzSrc="assets/guards/checksum/2.png" alt="" />
+    </div>
+  </nz-collapse-panel>
 
-      <nz-collapse-panel
-        nzHeader="testFunction招到竄改"
-        nzActive="false"
-        nzDisabled="false"
-      >
-      <div nz-col nzSpan="24">
-        <img
-          nz-image width="70%" nzSrc="assets/guards/checksum/3.png"
-          alt=""
-        />
-      </div>
-      </nz-collapse-panel>
+  <nz-collapse-panel nzHeader="testFunction招到竄改" nzActive="false" nzDisabled="false">
+    <div nz-col nzSpan="24">
+      <img nz-image width="70%" nzSrc="assets/guards/checksum/3.png" alt="" />
+    </div>
+  </nz-collapse-panel>
 
-      <nz-collapse-panel
-        nzHeader="Checksum Guard比對後發現與原先的Code不同，並作出相對反應"
-        nzActive="false"
-        nzDisabled="false"
-      >
-      <div nz-col nzSpan="24">
-        <img
-          nz-image width="70%" nzSrc="assets/guards/checksum/4.png"
-          alt=""
-        />
-      </div>
-      </nz-collapse-panel>
+  <nz-collapse-panel nzHeader="Checksum Guard比對後發現與原先的Code不同，並作出相對反應" nzActive="false" nzDisabled="false">
+    <div nz-col nzSpan="24">
+      <img nz-image width="70%" nzSrc="assets/guards/checksum/4.png" alt="" />
+    </div>
+  </nz-collapse-panel>
 
-      <nz-collapse-panel
-        nzHeader="操到篡改的testFunction"
-        nzActive="false"
-        nzDisabled="false"
-      >
-      <div nz-col nzSpan="24">
-        <img
-          nz-image width="70%" nzSrc="assets/guards/checksum/5.png"
-          alt=""
-        />
-      </div>
-      </nz-collapse-panel>
+  <nz-collapse-panel nzHeader="操到篡改的testFunction" nzActive="false" nzDisabled="false">
+    <div nz-col nzSpan="24">
+      <img nz-image width="70%" nzSrc="assets/guards/checksum/5.png" alt="" />
+    </div>
+  </nz-collapse-panel>
 
-      <nz-collapse-panel
-        nzHeader="Guardspec的設定方式"
-        nzActive="false"
-        nzDisabled="false"
-      >
-      <div nz-col nzSpan="24">
-        <img
-          nz-image width="70%" nzSrc="assets/guards/checksum/6.png"
-          alt=""
-        />
-      </div>
-      </nz-collapse-panel>
+  <nz-collapse-panel nzHeader="Guardspec的設定方式" nzActive="false" nzDisabled="false">
+    <div nz-col nzSpan="24">
+      <img nz-image width="70%" nzSrc="assets/guards/checksum/6.png" alt="" />
+    </div>
+  </nz-collapse-panel>
 
-    </nz-collapse>
-   
+</nz-collapse>

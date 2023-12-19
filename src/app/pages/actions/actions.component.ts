@@ -22,6 +22,10 @@ export class ActionsComponent implements OnInit {
     // }
   } 
 
+  arxanInvocation(){
+    console.log("我是進入點")
+  }
+
 }
 
 

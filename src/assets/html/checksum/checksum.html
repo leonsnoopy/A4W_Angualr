@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Checksum</title>
+  <link rel=stylesheet type="text/css" href="./style.css">
+</head>
+
+
+<body>
+
+  <h1><a href="../index.html">Arxan Home</a> / Checksum</h1>
+  
+  <h2>Change the source action1.js or action2.js file to exploit tamper action.</h2>
+
+  <button onclick="add_one()">add_one</button>
+
+  <button onclick="add_two()">add_two</button>
+  
+  <div>
+    <h1 id="count"></h1>
+  </div>
+
+</body>
+
+</html>
+
+<script src="./action1.js"></script>
+<script src="./action2.js"></script>
+
+<!DOCTYPE html>
+
+<script>
+  var sum = 0;
+
+  var init = function(){
+    document.getElementById("count").textContent = sum;
+  }()
+  
+</script>
