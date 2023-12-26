@@ -42,7 +42,7 @@
             "production": {
               "namedChunks": true,
               "vendorChunk": true, 
-              "sourceMap": true,
+              "sourceMap": false,
               "buildOptimizer": true,
               "optimization": true,
               "budgets": [

@@ -2,18 +2,6 @@
 
 <div nz-row>
   <div nz-col nzSpan="24">
-    <nz-card nzTitle="Request來自於自己Server(Domain)上" [nzExtra]="extraTemplate">
-      <nz-empty *ngIf="!content1"></nz-empty>
-      <p style="overflow: auto;">{{content1}}</p>
-    </nz-card>
-    <ng-template #extraTemplate>
-      <button nz-button nzType="primary" (click)="apiGetForServer()">Get</button>
-    </ng-template>
-  </div>
-</div>
-
-<div nz-row>
-  <div nz-col nzSpan="24">
     <nz-card nzTitle="Request來自於(jsonplaceholder.typicode.com)上" [nzExtra]="extraTemplate2">
       <p>jsonplaceholder.typicode.com 是允許的 domain</p>
       <nz-empty *ngIf="!content2"></nz-empty>
@@ -34,6 +22,18 @@
     </nz-card>
     <ng-template #extraTemplate3>
       <button nz-button nzType="primary" (click)="apiGet3()">Get</button>
+    </ng-template>
+  </div>
+</div>
+
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <nz-card nzTitle="Request來自於自己Server(Domain)上" [nzExtra]="extraTemplate">
+      <nz-empty *ngIf="!content1"></nz-empty>
+      <p style="overflow: auto;">{{content1}}</p>
+    </nz-card>
+    <ng-template #extraTemplate>
+      <button nz-button nzType="primary" (click)="apiGetForServer()">Get</button>
     </ng-template>
   </div>
 </div>

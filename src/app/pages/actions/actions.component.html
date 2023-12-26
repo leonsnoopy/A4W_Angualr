@@ -1,8 +1,9 @@
 <h2>Arxan 動態偵測到事件之後，會啟動Action的反應機制</h2>
 
-<button nz-button nzType="primary" nzDanger (click)="actionError()">觸發Error</button>
-
-<button nz-button nzType="primary" (click)="arxanInvocation()">進入點測試</button>
+<button nz-button nzType="primary" (click)="arxanInvocationA()">進入點A</button>
+<button nz-button nzType="default" (click)="arxanInvocationB()">進入點B</button>
+<button nz-button nzType="primary" (click)="arxanInvocationC()">進入點C</button>
+<button nz-button nzType="default" (click)="arxanInvocationD()">進入點D</button>
 
 <div nz-row [nzGutter]="8">
   <div nz-col class="gutter-row" [nzSm]="32" [nzMd]="18">

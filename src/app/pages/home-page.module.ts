@@ -36,6 +36,7 @@ import { NumericLiteralHidingComponent } from './numeric-literal-hiding/numeric-
 import { ContorlFlowFlatteningComponent } from './contorl-flow-flattening/contorl-flow-flattening.component';
 import { IdentifierRenamingComponent } from './identifier-renaming/identifier-renaming.component';
 import { ActionsComponent } from './actions/actions.component';
+import { ErrorTrackComponent } from './errorTrack/errorTrack.component';
 import { GamebruteforceComponent } from './gamebruteforce/gamebruteforce.component';
 import { GamesComponent } from './games/games.component';
 import { LabsComponent } from './labs/labs.component';
@@ -78,6 +79,7 @@ import { LabsComponent } from './labs/labs.component';
     ContorlFlowFlatteningComponent,
     IdentifierRenamingComponent,
     ActionsComponent,
+    ErrorTrackComponent,
     GamebruteforceComponent,
     GamesComponent,
     LabsComponent

@@ -12,18 +12,20 @@ export class ActionsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  actionError(){
-    var a:any = {};
-    console.log(a.ex())
-    // try {
-    //   throw new Error('Whoops!');
-    // } catch (e) {
-    //   console.log(e.name + ': ' + e.message+ " trace" + e.stack);
-    // }
-  } 
+  arxanInvocationA(){
+    console.log("我是進入點A")
+  }
 
-  arxanInvocation(){
-    console.log("我是進入點")
+  arxanInvocationB(){
+    console.log("我是進入點B")
+  }
+
+  arxanInvocationC(){
+    console.log("我是進入點C")
+  }
+
+  arxanInvocationD(){
+    console.log("我是進入點D")
   }
 
 }

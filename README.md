@@ -1,8 +1,13 @@
 
 
 # ArxanProject 建置環境
-  use node v16 
+  node v16 
+  angular 12.2.12
+
+# Install
   npm install
+
+# Build
   npm run build
 
 # ArxanProject

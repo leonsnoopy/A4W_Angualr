@@ -21,6 +21,7 @@ import { NumericLiteralHidingComponent } from './pages/numeric-literal-hiding/nu
 import { ContorlFlowFlatteningComponent } from './pages/contorl-flow-flattening/contorl-flow-flattening.component';
 import { IdentifierRenamingComponent } from './pages/identifier-renaming/identifier-renaming.component';
 import { ActionsComponent } from './pages/actions/actions.component';
+import { ErrorTrackComponent } from './pages/errorTrack/errorTrack.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { GamesComponent } from './pages/games/games.component';
 import { LabsComponent } from './pages/labs/labs.component';
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: 'contorlFlowFlattening', component: ContorlFlowFlatteningComponent },
   { path: 'identifierRenaming', component: IdentifierRenamingComponent },
   { path: 'actions', component: ActionsComponent },
+  { path: 'errorTrack', component: ErrorTrackComponent },
   { path: 'games', component: GamesComponent },
   { path: 'labs', component: LabsComponent },
   { path: '**', redirectTo: '404'}
