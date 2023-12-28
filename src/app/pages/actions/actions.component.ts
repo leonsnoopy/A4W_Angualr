@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActionsComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    (window as any).arxanInvocationA = this.arxanInvocationA.bind(this);
+    (window as any).arxanInvocationB = this.arxanInvocationB.bind(this);
+    (window as any).arxanInvocationC = this.arxanInvocationC.bind(this);
+    (window as any).arxanInvocationD = this.arxanInvocationD.bind(this);
+  }
 
   ngOnInit(): void {
   }
@@ -28,6 +33,7 @@ export class ActionsComponent implements OnInit {
     console.log("我是進入點D")
   }
 
+  
 }
 
 
