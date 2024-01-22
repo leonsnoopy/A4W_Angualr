@@ -39,8 +39,20 @@ function automationDetection() {
   window.alert("Warning! AutomationDetection detected, please be careful!!")
 }
 
-function arxanInvocation() {
-  console.log("Active Arxan Guards")
+function arxanInvocationA() {
+  console.log("Active Arxan Invocation - A")
+}
+
+function arxanInvocationB() {
+  console.log("Active Arxan Invocation - B")
+}
+
+function arxanInvocationC() {
+  console.log("Active Arxan Invocation - C")
+}
+
+function arxanInvocationD() {
+  console.log("Active Arxan Invocation - D")
 }
 
 // arxan checkmarx callback 使用

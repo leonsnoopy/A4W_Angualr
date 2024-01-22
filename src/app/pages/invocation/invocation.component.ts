@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-declare let arxanInvocation :any;
+declare let arxanInvocationA :any;
+declare let arxanInvocationB :any;
+declare let arxanInvocationC :any;
+declare let arxanInvocationD :any;
 
 @Component({
   selector: 'app-invocation',
@@ -17,9 +20,23 @@ export class InvocationComponent implements OnInit {
     this.hostname=location.hostname
   }
   
-
-  active(){
-    arxanInvocation();
+  activeArxanInvocationA(){
+    arxanInvocationA();
   }
 
+  activeArxanInvocationB(){
+    arxanInvocationB();
+  }
+
+  activeArxanInvocationC(){
+    arxanInvocationC();
+  }
+
+  activeArxanInvocationD(){
+    arxanInvocationD();
+  }
+
+  gotoHtml() {
+    window.open("./assets/html/checksum/checksum.html", "_blank")
+  }
 }

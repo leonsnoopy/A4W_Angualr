@@ -40,6 +40,7 @@ import { ErrorTrackComponent } from './errorTrack/errorTrack.component';
 import { GamebruteforceComponent } from './gamebruteforce/gamebruteforce.component';
 import { GamesComponent } from './games/games.component';
 import { LabsComponent } from './labs/labs.component';
+import { NewComponentsComponent } from './new-components/new-components.component';
 
 @NgModule({
   imports: [
@@ -82,7 +83,8 @@ import { LabsComponent } from './labs/labs.component';
     ErrorTrackComponent,
     GamebruteforceComponent,
     GamesComponent,
-    LabsComponent
+    LabsComponent,
+    NewComponentsComponent
   ]
 })
 export class HomePageModules {}

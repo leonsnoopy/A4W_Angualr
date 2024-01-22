@@ -17,24 +17,20 @@
       <!-- A4W -->
       <li nz-submenu [(nzOpen)]="openMap.sub1" (nzOpenChange)="openHandler('sub1')" nzTitle="Web Portect" nzIcon="dashboard">
         <ul>
-          <!-- <li nz-menu-item nzMatchRouter>
+          <li nz-menu-item nzMatchRouter>
             <a routerLink="/home">Arxan For Web</a>
-          </li> -->
+          </li>
 
-          <!-- <li nz-menu-item nzMatchRouter>
+          <li nz-menu-item nzMatchRouter>
             <a routerLink="/invocation">Invocation</a>
-          </li> -->
+          </li>
 
-          <!-- <li nz-menu-item nzMatchRouter>
-            <a routerLink="/multiIns">Multiple Instances</a>
-          </li> -->
+          
 
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/actions">Actions</a>
           </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/errorTrack">Error</a>
-          </li>
+          
         </ul>
       </li>
       <!-- A4W Static Guard -->
@@ -89,6 +85,19 @@
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/subResourceIntegrity">SubResource Integrity</a>
           </li> -->
+        </ul>
+      </li>
+
+      <!-- A4W Usages -->
+      <li nz-submenu [(nzOpen)]="openMap.sub4" (nzOpenChange)="openHandler('sub4')" nzTitle="Usages" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/multiIns">Multiple Instances</a>
+          </li>
+
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/errorTrack">Error</a>
+          </li>
         </ul>
       </li>
     </ul>

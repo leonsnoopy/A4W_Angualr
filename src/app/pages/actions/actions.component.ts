@@ -7,31 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActionsComponent implements OnInit {
 
-  constructor() { 
-    (window as any).arxanInvocationA = this.arxanInvocationA.bind(this);
-    (window as any).arxanInvocationB = this.arxanInvocationB.bind(this);
-    (window as any).arxanInvocationC = this.arxanInvocationC.bind(this);
-    (window as any).arxanInvocationD = this.arxanInvocationD.bind(this);
-  }
+  // constructor() { 
+  //   (window as any).arxanInvocationA = this.arxanInvocationA.bind(this);
+  //   (window as any).arxanInvocationB = this.arxanInvocationB.bind(this);
+  //   (window as any).arxanInvocationC = this.arxanInvocationC.bind(this);
+  //   (window as any).arxanInvocationD = this.arxanInvocationD.bind(this);
+  // }
 
   ngOnInit(): void {
   }
 
-  arxanInvocationA(){
-    console.log("我是進入點A")
-  }
+  // arxanInvocationA(){
+  //   console.log("我是進入點A")
+  // }
 
-  arxanInvocationB(){
-    console.log("我是進入點B")
-  }
+  // arxanInvocationB(){
+  //   console.log("我是進入點B")
+  // }
 
-  arxanInvocationC(){
-    console.log("我是進入點C")
-  }
+  // arxanInvocationC(){
+  //   console.log("我是進入點C")
+  // }
 
-  arxanInvocationD(){
-    console.log("我是進入點D")
-  }
+  // arxanInvocationD(){
+  //   console.log("我是進入點D")
+  // }
 
   
 }
