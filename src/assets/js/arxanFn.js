@@ -63,11 +63,11 @@ function checksumDebug(a, b, c) {
   alert("Checksum detected")
 }
 
-function sendLineNotifyApi(msg) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", 'https://arxan.gss.com.tw/api/arxan_detected', true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.send(JSON.stringify({
-    message: msg
-  }));
-}
+// function sendLineNotifyApi(msg) {
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("POST", 'https://arxan.gss.com.tw/api/arxan_detected', true);
+//   xhr.setRequestHeader('Content-Type', 'application/json');
+//   xhr.send(JSON.stringify({
+//     message: msg
+//   }));
+// }

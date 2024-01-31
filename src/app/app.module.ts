@@ -1,4 +1,4 @@
-import { NgModule, APP_INITIALIZER, ErrorHandler, } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,8 +19,6 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzInputModule } from 'ng-zorro-antd/input';
 
 import { HomePageModules } from './pages/home-page.module';
-
-import * as Sentry from "@sentry/angular-ivy";
 
 registerLocaleData(en);
 
@@ -44,23 +42,7 @@ registerLocaleData(en);
     { 
     provide: NZ_I18N, 
     useValue: en_US 
-    },
-    {
-      provide: ErrorHandler,
-      useValue: Sentry.createErrorHandler({
-        showDialog: true,
-      }),
-    }, 
-    {
-      provide: Sentry.TraceService,
-      deps: [Router],
-    },
-    {
-      provide: APP_INITIALIZER,
-      useFactory: () => () => {},
-      deps: [Sentry.TraceService],
-      multi: true,
-    },
+    }
   ],
   bootstrap: [AppComponent]
 })
